@@ -17,10 +17,9 @@ jobs:
       - name: Build and push API image
         run: |
           docker-compose -f docker-compose.yml build api
-          docker tag codigo_facilito_proyecto_1-api:latest atrombetta81/codigo_facilito_proyecto1_api:latest
           docker push atrombetta81/codigo_facilito_proyecto1_api:latest
 
       - name: Build and push Web image
         run: |
-          docker-compose -f docker-compose.yml build web --tag codigo_facilito_proyecto_1-web:latest
+          docker-compose -f docker-compose.yml build web
           docker push atrombetta81/codigo_facilito_proyecto1_web:latest

@@ -2,6 +2,7 @@ version: "3.9"
 services:
   api:
     build: ./api
+    image: atrombetta81/codigo_facilito_proyecto1_api:latest
     container_name: api
     ports:
       - "5001:5000"
@@ -9,9 +10,10 @@ services:
       - proyecto1
   web:
     build: ./web
+    image: atrombetta81/codigo_facilito_proyecto1_web:latest
     container_name: front
     ports:
-      - "5173:5173"
+      - "5173:5173" 
     networks:
       - proyecto1
   
